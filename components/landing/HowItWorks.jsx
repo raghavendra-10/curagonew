@@ -3,7 +3,7 @@ export default function HowItWorks() {
     {
       number: "01",
       title: "Answer structured questions",
-      description: "Answer thoughtfully designed questions about how anxiety shows up in your life",
+      description: "Answer structured questions about your anxiety symptoms",
       color: "accent"
     },
     {
@@ -45,7 +45,7 @@ export default function HowItWorks() {
   }
 
   return (
-    <section className="px-[4%] py-16 md:py-20 bg-gradient-sage">
+    <section className="px-[4%] py-16 md:py-20 bg-gradient-warm section-transition">
       <div className="w-full max-w-container mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-primary mb-4">How it works</h2>

@@ -35,7 +35,7 @@ export default function WhoThisHelps() {
   ]
 
   return (
-    <section className="px-[4%] py-16 md:py-20 bg-surface-muted">
+    <section className="px-[4%] py-16 md:py-20 bg-gradient-warm section-transition">
       <div className="w-full max-w-container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-primary mb-4">Who this helps most</h2>
@@ -57,6 +57,13 @@ export default function WhoThisHelps() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Important note */}
+        <div className="text-center mt-8">
+          <p className="text-secondary text-base font-medium">
+            This is not for general stress or curiosity.
+          </p>
         </div>
       </div>
     </section>

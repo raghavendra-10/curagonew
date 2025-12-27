@@ -29,7 +29,7 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="px-[4%] py-16 md:py-20 bg-surface-muted">
+    <section className="px-[4%] py-16 md:py-20 bg-gradient-warm section-transition">
       <div className="w-full max-w-container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-primary mb-4">Frequently asked questions</h2>

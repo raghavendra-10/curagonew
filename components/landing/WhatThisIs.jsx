@@ -15,7 +15,7 @@ export default function WhatThisIs() {
   ]
 
   return (
-    <section className="px-[4%] py-16 md:py-20 bg-surface">
+    <section className="px-[4%] py-16 md:py-20 bg-gradient-warm section-transition">
       <div className="w-full max-w-container mx-auto">
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* What this is */}

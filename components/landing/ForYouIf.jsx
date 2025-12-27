@@ -1,14 +1,14 @@
 export default function ForYouIf() {
   const points = [
-    "You feel anxious but can't explain why",
-    "Your body reacts even when your mind feels calm",
+    "You feel anxious or uneasy but can't explain why",
+    "Your body shows anxiety symptoms even when your mind feels calm",
     "Anxiety keeps repeating in familiar patterns",
     "You want clarity before therapy or medication",
     "You're tired of guessing what's going on"
   ]
 
   return (
-    <section className="px-[4%] py-16 md:py-20 bg-surface-muted">
+    <section className="px-[4%] py-16 md:py-20 bg-gradient-warm section-transition">
       <div className="w-full max-w-container mx-auto">
         <div className="max-w-3xl mx-auto">
           <div className="bg-surface border border-border rounded-card p-8 md:p-10 premium-shadow">

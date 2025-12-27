@@ -1,6 +1,8 @@
+import RazorpayButton from '@/components/RazorpayButton'
+
 export default function SampleInsight() {
   return (
-    <section className="px-[4%] py-20 md:py-28 bg-gradient-subtle relative overflow-hidden">
+    <section className="px-[4%] py-20 md:py-28 bg-gradient-warm section-transition relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-30 -mr-48 -mt-48" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-sage-100 rounded-full blur-3xl opacity-30 -ml-48 -mb-48" />
@@ -8,96 +10,111 @@ export default function SampleInsight() {
       <div className="w-full max-w-container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-100 border border-accent-200 text-accent-700 text-sm font-medium mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-              <span>Sample insight from your report</span>
-            </div>
-            <h2 className="text-primary mb-4">What you'll discover</h2>
-            <p className="text-secondary text-lg max-w-2xl mx-auto">
-              Get deep, personalized insights about your unique anxiety patterns
+          <div className="text-center mb-8">
+            <h2 className="text-primary mb-3">What you'll discover</h2>
+            <p className="text-secondary text-lg mb-2">
+              A sample insight from your assessment report
+            </p>
+            <p className="text-muted text-sm">
+              Example only · Personal data blurred
             </p>
           </div>
 
-          {/* Main insight card */}
-          <div className="relative">
-            {/* Decorative line */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent-500 via-sage-400 to-amber-400 rounded-full" />
+          {/* Main insight card - light grey with subtle border */}
+          <div className="bg-surface-muted/50 border border-border rounded-2xl p-8 md:p-10 mb-6">
+            {/* Section title */}
+            <h3 className="text-primary font-semibold text-xl mb-6">
+              Anxiety Pattern Identified
+            </h3>
 
-            <div className="ml-8 bg-white/80 backdrop-blur-sm border-2 border-accent-200 rounded-2xl p-8 md:p-12 premium-shadow-lg">
-              {/* Insight text */}
-              <div className="relative">
-                {/* Quote decoration */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 text-accent-200">
-                  <svg fill="currentColor" viewBox="0 0 32 32">
-                    <path d="M10 8v8h-4l4 8h4l-4-8h4v-8zM22 8v8h-4l4 8h4l-4-8h4v-8z"/>
+            {/* Main pattern description */}
+            <p className="text-primary text-lg md:text-xl font-medium leading-relaxed mb-6">
+              Your anxiety follows a <span className="text-accent-700">thinking → control → repeat</span> loop.
+            </p>
+
+            {/* Pattern breakdown */}
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3 text-secondary text-base">
+                <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                <span>Future-focused thinking activates anxiety</span>
+              </li>
+              <li className="flex items-start gap-3 text-secondary text-base">
+                <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                <span>Attempts to control it bring short relief</span>
+              </li>
+              <li className="flex items-start gap-3 text-secondary text-base">
+                <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                <span>The loop keeps anxiety active, even after triggers pass</span>
+              </li>
+            </ul>
+
+            <p className="text-secondary text-base leading-relaxed mb-8">
+              This explains why anxiety can feel constant and hard to switch off.
+            </p>
+
+            {/* Why this feels confusing */}
+            <div className="border-t border-border pt-6 mb-6">
+              <h4 className="text-primary font-semibold text-lg mb-3">
+                Why this feels confusing
+              </h4>
+              <p className="text-secondary text-base leading-relaxed">
+                Your triggers are mostly internal — thoughts, mental scenarios, body signals — which is why anxiety can appear even on "calm" days.
+              </p>
+            </div>
+
+            {/* What your full report shows */}
+            <div className="border-t border-border pt-6">
+              <h4 className="text-primary font-semibold text-lg mb-3">
+                What your full report shows
+              </h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-3 text-secondary text-base">
+                  <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                  <span>Your main anxiety loop</span>
+                </li>
+                <li className="flex items-start gap-3 text-secondary text-base">
+                  <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                  <span>How mental & physical symptoms interact</span>
+                </li>
+                <li className="flex items-start gap-3 text-secondary text-base">
+                  <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                  <span>Load vs recovery balance</span>
+                </li>
+                <li className="flex items-start gap-3 text-secondary text-base">
+                  <span className="text-accent-700 mt-1.5 flex-shrink-0">●</span>
+                  <span>Clear, non-judgmental insight</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Blurred screenshot placeholder */}
+          <div className="bg-surface border border-border rounded-xl p-4 mb-8">
+            <div className="aspect-video bg-gradient-to-br from-muted/20 to-muted/10 rounded-lg flex items-center justify-center backdrop-blur-xl">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-surface-muted flex items-center justify-center">
+                  <svg className="w-8 h-8 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-
-                <p className="text-primary text-xl md:text-2xl font-medium leading-relaxed relative z-10 mb-8">
-                  "Your anxiety escalates when you attempt to reason your way out of physical
-                  discomfort, indicating a <span className="text-accent-700 font-semibold">stability-escalation loop</span> rather than baseline anxiety."
+                <p className="text-muted text-sm">
+                  Preview of your assessment report (content blurred)
                 </p>
-
-                {/* Key terms highlighted */}
-                <div className="flex flex-wrap gap-3">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sage-50 border border-sage-200">
-                    <div className="w-2 h-2 rounded-full bg-sage-400" />
-                    <span className="text-sm font-medium text-sage-700">Stability-escalation loop</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-50 border border-accent-200">
-                    <div className="w-2 h-2 rounded-full bg-accent-400" />
-                    <span className="text-sm font-medium text-accent-700">Pattern identified</span>
-                  </div>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-50 border border-amber-200">
-                    <div className="w-2 h-2 rounded-full bg-amber-400" />
-                    <span className="text-sm font-medium text-amber-700">Actionable insight</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom note */}
-          <div className="text-center mt-8">
-            <p className="text-muted text-base">
-              This is an example of the personalized insights you'll receive in your full report
+          {/* CTA */}
+          <div className="max-w-md mx-auto text-center">
+            <RazorpayButton source="sample-insight" variant="primary">
+              Start the 10-minute anxiety assessment
+            </RazorpayButton>
+            <p className="text-muted text-xs mt-3 leading-relaxed">
+              ₹299 · One-time · Instant results
             </p>
-          </div>
-
-          {/* Visual breakdown cards */}
-          <div className="grid md:grid-cols-3 gap-4 mt-12">
-            <div className="bg-white border border-accent-200 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-accent-100 flex items-center justify-center">
-                <svg className="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h4 className="font-semibold text-primary mb-2">Pattern Analysis</h4>
-              <p className="text-sm text-secondary">Identify specific anxiety loops</p>
-            </div>
-
-            <div className="bg-white border border-sage-200 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-sage-100 flex items-center justify-center">
-                <svg className="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h4 className="font-semibold text-primary mb-2">Clear Insights</h4>
-              <p className="text-sm text-secondary">Understand what's happening</p>
-            </div>
-
-            <div className="bg-white border border-amber-200 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-amber-100 flex items-center justify-center">
-                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h4 className="font-semibold text-primary mb-2">Next Steps</h4>
-              <p className="text-sm text-secondary">Actionable recommendations</p>
-            </div>
+            <p className="text-muted text-xs mt-2 leading-relaxed">
+              If you choose to book a clinical consultation within 7 days, 50% of this assessment fee is adjusted against the consultation cost.
+            </p>
           </div>
         </div>
       </div>

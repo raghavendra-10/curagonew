@@ -2,7 +2,7 @@ import RazorpayButton from '@/components/RazorpayButton'
 
 export default function PriceAnchor() {
   return (
-    <section className="px-[4%] py-20 md:py-24 bg-gradient-to-br from-accent-700 via-accent-600 to-sage-600 text-surface relative overflow-hidden">
+    <section className="px-[4%] py-20 md:py-24 bg-gradient-to-br from-accent-700 via-accent-600 to-sage-600 text-surface section-transition relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -ml-48 -mb-48" />

@@ -2,15 +2,16 @@
 
 import { useEffect } from 'react'
 import { trackPageView } from '@/lib/tracking'
+import Header from '@/components/Header'
 import Hero from '@/components/landing/Hero'
 import ForYouIf from '@/components/landing/ForYouIf'
 import WhatThisIs from '@/components/landing/WhatThisIs'
 import HowItWorks from '@/components/landing/HowItWorks'
 import SampleInsight from '@/components/landing/SampleInsight'
 import WhoThisHelps from '@/components/landing/WhoThisHelps'
-import PriceAnchor from '@/components/landing/PriceAnchor'
 import FAQ from '@/components/landing/FAQ'
 import FinalCTA from '@/components/landing/FinalCTA'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   useEffect(() => {
@@ -19,16 +20,19 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <ForYouIf />
-      <WhatThisIs />
-      <HowItWorks />
-      <SampleInsight />
-      <WhoThisHelps />
-      <PriceAnchor />
-      <FAQ />
-      <FinalCTA />
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen pt-20">
+        <Hero />
+        <ForYouIf />
+        <WhoThisHelps />
+        <SampleInsight />
+        <HowItWorks />
+        <WhatThisIs />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
   )
 }
