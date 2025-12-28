@@ -1,6 +1,16 @@
+'use client'
+
+import { useState } from 'react'
 import RazorpayButton from '@/components/RazorpayButton'
+import LoadingRedirect from '@/components/LoadingRedirect'
 
 export default function Hero() {
+  const [showRedirect, setShowRedirect] = useState(false)
+
+  const handleExploratoryTest = (e) => {
+    e.preventDefault()
+    setShowRedirect(true)
+  }
   return (
     <section className="min-h-[85vh] flex items-center justify-center px-[4%] py-16 md:py-20 bg-gradient-warm section-transition relative overflow-hidden">
       {/* Decorative elements */}
@@ -16,53 +26,80 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-secondary text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            A short, doctor-designed assessment to help you understand your anxiety patterns — privately and clinically.
+            A short, doctor-designed assessment to help you understand why your anxiety keeps repeating — privately and clinically.
           </p>
 
           {/* CTA */}
-          <div className="max-w-md mx-auto mb-6">
+          <div className="max-w-md mx-auto mb-3">
             <RazorpayButton source="hero" variant="primary">
               Start the 10-minute anxiety assessment
             </RazorpayButton>
           </div>
 
-          {/* Badge - moved below CTA */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-50 border border-accent-200 text-accent-700 mb-8">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="text-sm font-medium">Clinical Assessment Tool</span>
+          {/* Price context */}
+          <div className="mb-2">
+            <p className="text-secondary text-sm font-medium">
+              ₹150 · One-time · New year pricing
+            </p>
+          </div>
+          <div className="mb-10">
+            <p className="text-muted text-xs">
+              As we begin 2026, CALA 1.0 is available at introductory pricing.
+            </p>
           </div>
 
-          {/* Trust indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-secondary">
+          {/* Trust indicators - horizontal strip */}
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm text-secondary mb-8">
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-full bg-sage-100 flex items-center justify-center">
-                <svg className="w-3 h-3 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
+              <svg className="w-4 h-4 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Clinical assessment tool</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
               <span>Privacy protected</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-full bg-accent-100 flex items-center justify-center">
-                <svg className="w-3 h-3 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
+              <svg className="w-4 h-4 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
               <span>Instant results</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center">
-                <svg className="w-3 h-3 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
+              <svg className="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
               <span>No AI involved</span>
             </div>
           </div>
+
+          {/* Pressure-channelising hatch */}
+          <div className="text-center">
+            <p className="text-secondary text-sm mb-3 italic">
+              Not ready to commit yet?
+            </p>
+            <button
+              onClick={handleExploratoryTest}
+              className="px-6 py-3 rounded-button bg-surface border-2 border-border text-secondary font-medium text-sm md:text-base hover:border-primary hover:text-primary hover:bg-surface-muted transition-all duration-200 premium-shadow-lg mb-3"
+            >
+              Start with a short exploratory test
+            </button>
+            <p className="text-muted text-xs max-w-lg mx-auto leading-relaxed">
+              This is not a diagnosis or therapy. It helps you see whether a full assessment makes sense.
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Loading redirect modal */}
+      <LoadingRedirect
+        url="https://curago.in/atm"
+        isOpen={showRedirect}
+        onClose={() => setShowRedirect(false)}
+      />
     </section>
   )
 }

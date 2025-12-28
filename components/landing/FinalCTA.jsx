@@ -14,10 +14,13 @@ export default function FinalCTA() {
               Start the assessment
             </RazorpayButton>
 
-            <p className="text-muted text-xs mt-3 leading-relaxed">
-              Access instantly after completion · ₹299
+            <p className="text-secondary text-sm font-medium mt-3">
+              ₹150 · One-time · New year pricing
             </p>
             <p className="text-muted text-xs mt-2 leading-relaxed">
+              Access instantly after completion
+            </p>
+            <p className="text-muted text-xs mt-3 leading-relaxed">
               If you choose to book a clinical consultation within 7 days, 50% of this assessment fee is adjusted against the consultation cost.
             </p>
           </div>

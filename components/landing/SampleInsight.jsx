@@ -59,7 +59,7 @@ export default function SampleInsight() {
                 Why this feels confusing
               </h4>
               <p className="text-secondary text-base leading-relaxed">
-                Your triggers are mostly internal — thoughts, mental scenarios, body signals — which is why anxiety can appear even on "calm" days.
+                Your triggers are mostly internal thoughts, mental scenarios, body signals which is why anxiety can appear even on "calm" days.
               </p>
             </div>
 
@@ -101,10 +101,13 @@ export default function SampleInsight() {
             <RazorpayButton source="sample-insight" variant="primary">
               Start the 10-minute anxiety assessment
             </RazorpayButton>
-            <p className="text-muted text-xs mt-3 leading-relaxed">
-              ₹299 · One-time · Instant results
+            <p className="text-secondary text-sm font-medium mt-3">
+              ₹150 · One-time · New year pricing
             </p>
             <p className="text-muted text-xs mt-2 leading-relaxed">
+              Access instantly after completion
+            </p>
+            <p className="text-muted text-xs mt-3 leading-relaxed">
               If you choose to book a clinical consultation within 7 days, 50% of this assessment fee is adjusted against the consultation cost.
             </p>
           </div>
