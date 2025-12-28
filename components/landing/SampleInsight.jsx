@@ -101,11 +101,8 @@ export default function SampleInsight() {
             <RazorpayButton source="sample-insight" variant="primary">
               Start the 10-minute anxiety assessment
             </RazorpayButton>
-            <p className="text-secondary text-sm font-medium mt-3">
-              ₹150 · One-time · New year pricing
-            </p>
-            <p className="text-muted text-xs mt-2 leading-relaxed">
-              Access instantly after completion
+            <p className="text-amber-700 text-base font-semibold mt-3">
+              As we begin 2026, CALA 1.0 is available at an introductory price of ₹150
             </p>
             <p className="text-muted text-xs mt-3 leading-relaxed">
               If you choose to book a clinical consultation within 7 days, 50% of this assessment fee is adjusted against the consultation cost.
