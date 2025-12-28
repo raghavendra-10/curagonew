@@ -38,12 +38,12 @@ export default function Hero() {
 
           {/* Price context */}
           <div className="mb-2">
-            <p className="text-secondary text-sm font-medium">
+            <p className="text-secondary text-lg font-semibold">
               ₹150 · One-time · New year pricing
             </p>
           </div>
           <div className="mb-10">
-            <p className="text-muted text-xs">
+            <p className="text-amber-700 text-base font-semibold">
               As we begin 2026, CALA 1.0 is available at introductory pricing.
             </p>
           </div>
