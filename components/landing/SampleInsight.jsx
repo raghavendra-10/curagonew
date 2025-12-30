@@ -98,14 +98,19 @@ export default function SampleInsight() {
 
           {/* CTA */}
           <div className="max-w-md mx-auto text-center">
+            <p className="text-secondary text-base mb-3">
+              Get access now, take the test when it is convenient
+            </p>
+
             <RazorpayButton source="sample-insight" variant="primary">
-              Start the 10-minute anxiety assessment
+              Get access to test-₹150
             </RazorpayButton>
+
+            <p className="text-muted text-sm mt-3">
+              Test link and login credentials will be provided after payment completion
+            </p>
             <p className="text-amber-700 text-base font-semibold mt-3">
               As we begin 2026, CALA 1.0 is available at an introductory price of ₹150
-            </p>
-            <p className="text-muted text-xs mt-3 leading-relaxed">
-              If you choose to book a clinical consultation within 7 days, 50% of this assessment fee is adjusted against the consultation cost.
             </p>
           </div>
         </div>

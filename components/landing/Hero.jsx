@@ -30,15 +30,22 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
+          <p className="text-secondary text-base mb-3">
+            Get access now, take the test when it is convenient
+          </p>
+
           <div className="max-w-md mx-auto mb-3">
             <RazorpayButton source="hero" variant="primary">
-              Start the 10-minute anxiety assessment
+              Get access to test-₹150
             </RazorpayButton>
           </div>
 
-          {/* Price context */}
+          {/* Post-CTA message */}
           <div className="mb-10">
-            <p className="text-amber-700 text-base font-semibold">
+            <p className="text-muted text-sm">
+              Test link and login credentials will be provided after payment completion
+            </p>
+            <p className="text-amber-700 text-base font-semibold mt-3">
               As we begin 2026, CALA 1.0 is available at an introductory price of ₹150
             </p>
           </div>
