@@ -5,6 +5,7 @@ import StopGuessing from '@/components/care/StopGuessing'
 import PrivateFirstStep from '@/components/care/PrivateFirstStep'
 import WhatTheyDiscover from '@/components/care/WhatTheyDiscover'
 import CareFinalCTA from '@/components/care/CareFinalCTA'
+import CareStickyButtons from '@/components/care/CareStickyButtons'
 
 export const metadata = {
   title: "Gift CALA - Help Someone You Love | CuraGo",
@@ -24,6 +25,7 @@ export default function CarePage() {
         <CareFinalCTA />
       </main>
       <Footer />
+      <CareStickyButtons />
     </div>
   )
 }

@@ -17,13 +17,17 @@ export default function CareHero() {
             When your loved one is trapped in an anxiety loop
           </h1>
 
-          {/* Description - Single Lines */}
-          <div className="mb-10 md:mb-12 space-y-2 md:space-y-3 max-w-2xl mx-auto">
+          {/* First Description Paragraph */}
+          <div className="mb-6 md:mb-8 max-w-2xl mx-auto">
             <p className="text-secondary text-base md:text-lg lg:text-xl leading-relaxed">
-              You see them overthinking at night
+              You see them overthinking in the night, the constant tension even on 'calm' days. You want to help them, but don't know where to start.
             </p>
+          </div>
+
+          {/* Gift Clarity Paragraph */}
+          <div className="mb-10 md:mb-12 max-w-2xl mx-auto">
             <p className="text-secondary text-base md:text-lg lg:text-xl leading-relaxed">
-              You see the constant tension they carry
+              <strong className="text-primary font-semibold">Gift them clarity.</strong> CALA 1.0 is a doctor-designed clinical assessment which will help your loved one understand why their anxiety keeps repeating—private, at their convenience.
             </p>
           </div>
 
