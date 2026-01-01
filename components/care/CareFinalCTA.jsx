@@ -37,14 +37,14 @@ export default function CareFinalCTA() {
               <RazorpayButton
                 variant="primary"
                 source="care-final-cta"
-                className="group relative w-full h-[64px] md:h-[72px] bg-accent-600 hover:bg-accent-700 text-white rounded-2xl font-semibold text-lg md:text-xl transition-all duration-300 shadow-2xl hover:shadow-accent-500/50 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
+                className="group relative w-full h-[56px] md:h-[64px] lg:h-[72px] bg-accent-600 hover:bg-accent-700 text-white rounded-2xl font-semibold text-base md:text-lg lg:text-xl transition-all duration-300 shadow-2xl hover:shadow-accent-500/50 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
               >
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3 whitespace-nowrap">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                   </svg>
-                  Gift Access for ₹150
-                  <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span>Gift Access for ₹150</span>
+                  <svg className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 flex-shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
