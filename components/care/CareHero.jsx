@@ -12,28 +12,18 @@ export default function CareHero() {
 
       <div className="w-full max-w-container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Emoji or Icon Header */}
-          <div className="mb-8 flex justify-center">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-sage-50 border border-sage-200 shadow-sm">
-              <svg className="w-5 h-5 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-              <span className="text-sm font-medium text-sage-800">Gift clarity to someone you care about</span>
-            </div>
-          </div>
-
           {/* Main Heading */}
-          <h1 className="text-primary mb-6 text-balance">
-            When someone you love is trapped in an anxiety loop
+          <h1 className="text-primary mb-8 text-balance">
+            When your loved one is trapped in an anxiety loop
           </h1>
 
-          {/* Description */}
-          <div className="mb-12 space-y-4 max-w-2xl mx-auto">
+          {/* Description - Single Lines */}
+          <div className="mb-12 space-y-3 max-w-2xl mx-auto">
             <p className="text-secondary text-lg md:text-xl leading-relaxed">
-              You see them overthinking at night. You see the constant tension they carry, even on "calm" days. You want to help, but you don't know where to start.
+              You see them overthinking at night
             </p>
             <p className="text-secondary text-lg md:text-xl leading-relaxed">
-              <strong className="text-primary font-semibold">Gift them clarity.</strong> CALA 1.0 is a doctor-designed clinical assessment that helps your loved one understand why their anxiety keeps repeating—privately, clinically, and at their own pace.
+              You see the constant tension they carry
             </p>
           </div>
 
@@ -62,6 +52,13 @@ export default function CareHero() {
             {/* Credentials Note */}
             <p className="text-muted text-sm md:text-base max-w-lg leading-relaxed">
               Access credentials will be sent to you to share with them whenever they're ready
+            </p>
+          </div>
+
+          {/* Gift Message */}
+          <div className="mb-8">
+            <p className="text-secondary text-base md:text-lg font-medium">
+              Push the gift of clarity to someone you care about
             </p>
           </div>
 
